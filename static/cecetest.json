@@ -1,0 +1,34 @@
+{
+	"title": "Cecelia McNeil & Associates | Asia Executive Search",
+	"content": {
+		"businessTitle": "Cecelia McNeil & Associates",
+		"businessSubTitle": "Asia Executive Search",
+		"pages": {
+			"index": {
+				"pageType": "landingPage",
+				"content": {
+					"intro": {
+						"mainImages": {
+							"handshake": "",
+							"headnod": "",
+							"standup": ""
+						}
+						"callToAction": {
+							"heading": "Placing Powerful People",
+							"subheading": "We're Cecelia McNeil & Associates. And we want you in our midst- We're looking for the most competitive candidates out there. Check us out.",
+							"actionButton": "Join Us"
+						}
+					}
+				}
+			},
+			"about": {
+				"pageType": "aboutPage",
+				"content": {}
+			},
+			"services": {
+				"pageType": "infoPage",
+				"content": {}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+<div class='cta-box'>
+	<div class='cta container'>
+		<h1 class='cta-heading'>{{ heading }}</h1>
+		{% if subheading %}
+			<h2 class='cta-subheading'>{{ subheading }}</h2>
+		{% endif %}
+		{% if action_button %}
+		<div class='button cta-button'>
+			<a href='{{ action_link }}'>
+				<div>
+					{{ action_button }}
+				</div>
+			</a>
+		</div>
+		{% endif %}
+	</div>
+</div>

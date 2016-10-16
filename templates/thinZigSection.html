@@ -1,0 +1,40 @@
+<div class='thin-zig-section-box row container center centerItems'>
+	{% if image and counter%2 == 0 %}
+		<div class='thin-zig-section center col-md-6'>
+			<img src='{{ image }}' class='thin-zig-section-image' style="width:100%;" />
+		</div>
+	{% endif %}
+
+	<div class='thin-zig-section center {% if image %} col-md-6 {% else %} col-md-12 {% endif %}'>
+
+		{% if heading %}
+			<h1 class='thin-zig-section-heading'>{{ heading }}</h1>
+		{% endif %}
+
+		{% if subheading %}
+			<h2 class='thin-zig-section-subheading'>{{ subheading }}</h2>
+		{% endif %}
+
+		{% if paragraph %}
+			<p class='thin-zig-section-paragraph'>{{ paragraph }}</p>
+		{% endif %}
+
+		{% if action_link %}
+		<div class='button thin-zig-section-button'>
+			<a href='{{ action_link }}'>
+				<div>
+					Read More
+				</div>
+			</a>
+		</div>
+		{% endif %}
+
+	</div>
+
+	{% if image and counter%2 == 1 %}
+		<div class='thin-zig-section center col-md-6'>
+			<img src='{{ image }}' class='thin-zig-section-image' style="width:100%;" />
+		</div>
+	{% endif %}
+
+</div>

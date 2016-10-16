@@ -1,0 +1,24 @@
+<div class='cta-box'>
+	<div class='cta container'>
+		<div class='row'>
+		<div class='col-md-6 fillHeight' style='position:relative;'>
+		<h1 class='cta-heading textRight'>{{ heading }}</h1>
+		{% if action_button %}
+		<br />
+		<div class='button cta-button' style='float:right;'>
+			<a href='{{ action_link }}'>
+				<div>
+					{{ action_button }}
+				</div>
+			</a>
+		</div>
+		{% endif %}
+	</div>
+	<div class='col-md-6 fillHeight'>
+		{% if subheading %}
+			<h2 class='cta-subheading'>{{ subheading }}</h2>
+		{% endif %}
+	</div>
+		</div>
+	</div>
+</div>
