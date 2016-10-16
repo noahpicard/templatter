@@ -220,8 +220,6 @@ def get_color_set():
 		if colors[1][2][2] > 50:
 			text_color='#222'
 
-
-
 	return primary_color, secondary_color, accent_color, text_color
 
 
@@ -233,9 +231,7 @@ def get_font_set():
 
 
 def generate_css_file(data, navbar_template="", footer_template="", section_templates=[]):
-	
 	primary_color, secondary_color, accent_color, text_color = get_color_set()
-
 	heading_font, content_font = get_font_set()
 
 	result = env.get_template('basicBody.css').render(primary_color=primary_color, 
