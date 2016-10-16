@@ -261,7 +261,22 @@ def make_intro_page(data, menuLinks):
 			business_subtitle=data['content']['businessSubTitle'],
 			links=["static/"+link for link in menuLinks])
 
-	content = navbar
+	content = navbar + """
+	<br>
+
+	<a href="/static/gen">Generate new layout!</a>
+
+	<frameset rows="10%,80%,10%">
+   <frame name="top" src="../top_frame.htm" />
+   <frame name="main" src="index.html" />
+   <frame name="bottom" src="../bottom_frame.htm" />
+   <noframes>
+   <body>
+      Your browser does not support frames.
+   </body>
+   </noframes>
+</frameset>
+	"""
 
 	result = env.get_template('emptyPage.html').render(title=data["title"], content=content)
 	make_file('static/introPage.html', [result])	

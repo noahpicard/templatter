@@ -13,33 +13,33 @@ font-family: 'Indie Flower', cursive;*/
 
 /* Styles */
 body {
-	background-color: hsl(0.0,0.0%,10.0%);
-	color: #eee;
+	background-color: hsl(177.53,79.74%,68.78%);
+	color: #222;
 	font-size: 16px;
 }
 
 h1 {
-	font-family: Playfair Display, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 h2 {
-	font-family: Inconsolata, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #business-title {
-	font-family: Playfair Display, Garamond, 'Times New Roman', serif;
+	font-family: Raleway, Garamond, 'Times New Roman', serif;
 	font-size: 200%;
-	color:#eee;
+	color:#222;
 }
 
 #business-subtitle {
-	font-family: Inconsolata, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 120%;
-	color: hsl(102.85,97.05%,68.47%);
+	color: hsl(27.53,79.74%,68.78%);
 }
 
 #main-navbar {
-	background-color: hsl(192.85,97.05%,68.47%);
-	color: hsl(102.85,97.05%,68.47%);
+	background-color: hsl(327.53,79.74%,68.78%);
+	color: hsl(27.53,79.74%,68.78%);
 	border: none;
 	border-radius: 0px;
 	min-height: 5em;
@@ -88,25 +88,25 @@ div.color-full-center-image-box {
 }
 
 .cta-heading {
-	font-family: Playfair Display;
+	font-family: Raleway;
 }
 
 .cta-subheading {
-	font-family: Inconsolata;
+	font-family: Roboto;
 }
 
 
 .button>a {
 	text-decoration: none;
 	text-align: center;
-	color: #eee;
+	color: #222;
 }
 
 .button {
-	background-color: hsl(102.85,97.05%,68.47%);
+	background-color: hsl(27.53,79.74%,68.78%);
 	padding:.3em;
 	display: inline-block;
-	font-family: Inconsolata;
+	font-family: Roboto;
 }
 
 
@@ -124,8 +124,8 @@ div.color-full-center-image-box {
 	background-color: rgba(0,0,0,0);
 	transition: background-color .3s;
 	
-	border: 4px solid #eee;
-	font-family: Inconsolata;
+	border: 4px solid #222;
+	font-family: Roboto;
 }
 
 .cta-button:hover {
@@ -147,7 +147,7 @@ div.color-full-center-image-box {
 }
 
 .navbar-nav>li>a {
-	color: hsl(102.85,97.05%,68.47%);
+	color: hsl(27.53,79.74%,68.78%);
 	text-align: center;
 }
 
@@ -172,11 +172,11 @@ div.color-full-center-image-box {
 }
 
 #main-menu>li:hover {
-	background-color: hsl(102.85,97.05%,68.47%);
+	background-color: hsl(27.53,79.74%,68.78%);
 }
 
 #main-menu>li:hover>a {
-	color: #eee;
+	color: #222;
 }
 
 .navbar-child {
@@ -192,8 +192,8 @@ div.color-full-center-image-box {
 }
 
 .basic-footer-box {
-	background-color: hsl(102.85,97.05%,68.47%);
-	color: #eee;
+	background-color: hsl(27.53,79.74%,68.78%);
+	color: #222;
 	margin: 1em;
 }
 
@@ -218,10 +218,45 @@ div.color-full-center-image-box {
 	display: flex;
   align-items: center;
 }
-#main-navbar {
-  background-color: rgba(0,0,0,0);
-  position: absolute;
+.navbar-header {
+  display: block;
+  text-align: center;
   width: 100%;
+  height: auto;
+  padding: 1em 0 1em 0;
+  margin-top: .5em;
+}
+
+.navbar-brand {
+	float: none;
+	line-height: none;
+}
+.flex {
+	display: flex;
+}
+
+#main-menu {
+	float: none;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#main-menu>li {
+	height: 5em; 
+	text-align: center;
+}
+
+#main-navbar {
+	position: relative;
+	background-color: transparent;
+}
+
+#business-title {
+	font-size: 400%;
+}
+#business-subtitle {
+	font-size: 200%;
+	margin: .2em;
 }
 
 
