@@ -8,12 +8,33 @@ import getcolor as gc
 
 env = Environment(loader=PackageLoader('templates', '.'))
 
-main_image_template_list = ['fullCenterImage.html', 'colorFullCenterImage.html']
-navbar_template_list = ['centerDisplayNavbar', 'basicNavbar']
-section_template_list = ['columnSection','zigSection','thinZigSection']
-footer_template_list = ['basicFooter']
-cta_template_list = ['centerCTA', 'leftCTA', 'subRightCTA']
-heading_font_list = ['Helvetica Neue', 
+navbar_template_list = [
+	'centerDisplayNavbar', 
+	'basicNavbar', 
+	'transparentNavbar', 
+	'fadeOverlayNavbar']
+
+main_image_template_list = [
+	'fullCenterImage', 
+	'colorFullCenterImage']
+
+cta_template_list = [
+	'centerCTA', 
+	'leftCTA', 
+	'subRightCTA']
+
+section_template_list = [
+	'columnSection',  
+ #'zigSection',
+	'thinZigSection', 
+	'mixOneTwoSection', 
+	'bandZigSection']
+
+footer_template_list = [
+	'basicFooter']
+
+heading_font_list = [
+	'Helvetica Neue', 
 	'Garamond', 
 	'Abril Fatface', 
 	'Raleway',
@@ -26,7 +47,9 @@ heading_font_list = ['Helvetica Neue',
 	'Inconsolata', 
 	'Indie Flower',
 	'Kalam']
-content_font_list = ['Helvetica Neue', 
+
+content_font_list = [
+	'Helvetica Neue', 
 	'Times New Roman', 
 	'Verdana', 
 	'Raleway',
@@ -71,6 +94,9 @@ def generate_html_file(source_file):
 
 		make_file('static/'+page_title+'.html', [result])
 
+	print "navbar:", navbar_template
+	print "sections:", section_templates
+	print "footer:", footer_template
 	print generate_css_file(data, navbar_template, footer_template, section_templates)
 	print 'broWhat'
 
@@ -114,23 +140,24 @@ def generate_detail_sections(detail_sections):
 	full_sections = []
 	counter = 0
 	section_row = []
-	section_template = pick_one(section_template_list)
-		
+	section_template = pick_one(section_template_list,2)
+	seed = randrange(0,144)
+
 	for section_name in detail_sections:
 		weight = section_weights[section_name]
 		section = detail_sections[section_name]
 		if 'subheading' not in section:
 			section['subheading'] = ''
-		section_row.append(env.get_template(section_template+'.html').render(heading=section['heading'], 
+		section_row.append(env.get_template('section/'+section_template+'.html').render(heading=section['heading'], 
 				subheading=section['subheading'], 
-				paragraph=section['paragraph'], 
+				paragraph=section['paragraph'][:250], 
 				image=section['image'],
 				column_weight='col-md-4',
 				action_link='#',
-				counter=counter))
-		#if counter%4 == 0:
-		#	row = "\n".join(section_row)
-		#	full_sections.append(#TODO)
+				counter=counter,
+				seed=seed,
+				number_of_sections=len(detail_sections)))
+		print counter, len(detail_sections)
 		counter += 1
 	full_sections += section_row
 	return "\n".join(full_sections), section_template
@@ -151,12 +178,12 @@ def get_section_size(section):
 
 def generate_main_image(img_name, img_url, img_content) :
 	main_image_template = pick_one(main_image_template_list)
-	return env.get_template(main_image_template).render(image_url = img_url, content=img_content)
+	return env.get_template('fullimage/'+main_image_template+'.html').render(image_url = img_url, content=img_content)
 
 
 def generate_navbar(data, menuLinks):
 	navbar_template = pick_one(navbar_template_list)
-	navbar = env.get_template(navbar_template+'.html').render(business_title=data['content']['businessTitle'],
+	navbar = env.get_template('navbar/'+navbar_template+'.html').render(business_title=data['content']['businessTitle'],
 			business_subtitle=data['content']['businessSubTitle'],
 			links=menuLinks)
 
@@ -165,7 +192,7 @@ def generate_navbar(data, menuLinks):
 
 def generate_footer(data):
 	footer_template = pick_one(footer_template_list)
-	footer = env.get_template(footer_template+'.html').render(business_title=data['content']['businessTitle'],
+	footer = env.get_template('footer/'+footer_template+'.html').render(business_title=data['content']['businessTitle'],
 			business_subtitle=data['content']['businessSubTitle'],
 			links=data['content']['footer']['links'])
 
@@ -176,7 +203,7 @@ def generate_cta(data):
 	if 'callToAction' in data:
 		cta_template = pick_one(cta_template_list)
 		cta = data['callToAction']
-		return env.get_template(cta_template+'.html').render(heading = cta['heading'], 
+		return env.get_template('cta/'+cta_template+'.html').render(heading = cta['heading'], 
 			subheading = cta['subheading'],
 			action_link = cta['actionLink'],
 			action_button = cta['actionButton'])
@@ -194,6 +221,7 @@ def get_color_set():
 	secondary_color='#224477'
 	accent_color='#bb192a'
 	text_color='#eee'
+	inv_text_color='rgba(0,0,0,0.4)'
 
 	colors = gc.get_colors()
 	print colors
@@ -205,6 +233,7 @@ def get_color_set():
 		secondary_color = colors[1][0]
 		if colors[0][2][2] > 50:
 			text_color='#222'
+			inv_text_color='rgba(255,255,255,0.4)'
 
 	elif len(colors) == 3:
 		primary_color = colors[0][0]
@@ -212,6 +241,7 @@ def get_color_set():
 		accent_color = colors[2][0]
 		if colors[0][2][2] > 50:
 			text_color='#222'
+			inv_text_color='rgba(255,255,255,0.4)'
 
 	elif len(colors) == 4:
 		primary_color = colors[1][0]
@@ -219,8 +249,16 @@ def get_color_set():
 		accent_color = colors[3][0]
 		if colors[1][2][2] > 50:
 			text_color='#222'
+			inv_text_color='rgba(255,255,255,0.4)'
 
-	return primary_color, secondary_color, accent_color, text_color
+
+	#primary_color = '#999999'
+	#secondary_color='#777777'
+	#accent_color='#eee'
+	#text_color='#333'
+	#inv_text_color='rgba(0,0,0,0.4)'
+
+	return primary_color, secondary_color, accent_color, text_color, inv_text_color
 
 
 def get_font_set():
@@ -231,33 +269,41 @@ def get_font_set():
 
 
 def generate_css_file(data, navbar_template="", footer_template="", section_templates=[]):
-	primary_color, secondary_color, accent_color, text_color = get_color_set()
+	primary_color, secondary_color, accent_color, text_color, inv_text_color = get_color_set()
 	heading_font, content_font = get_font_set()
 
 	result = env.get_template('basicBody.css').render(primary_color=primary_color, 
-			secondary_color=secondary_color, text_color=text_color, accent_color=accent_color,
+			secondary_color=secondary_color, text_color=text_color, accent_color=accent_color, 
+			inv_text_color=inv_text_color,
 			heading_font=heading_font, content_font=content_font)
 
 	navbarcss = ""
-	if navbar_template in ['centerDisplayNavbar']:
-		navbarcss = env.get_template(navbar_template+'.css').render()
-	elif randint(0,1) == 0:
-		navbarcss = env.get_template('transparentNavbar.css').render()
+	if navbar_template in ['centerDisplayNavbar', 'transparentNavbar', 'fadeOverlayNavbar']:
+		navbarcss = env.get_template('navbar/'+navbar_template+'.css').render(primary_color=primary_color, 
+			secondary_color=secondary_color, text_color=text_color, accent_color=accent_color, 
+			inv_text_color=inv_text_color,
+			heading_font=heading_font, content_font=content_font)
 
 	footercss = ""
 	if footer_template in []:
-		footercss = env.get_template(footer_template+'.css').render()
+		footercss = env.get_template('footer/'+footer_template+'.css').render(primary_color=primary_color, 
+			secondary_color=secondary_color, text_color=text_color, accent_color=accent_color, 
+			inv_text_color=inv_text_color,
+			heading_font=heading_font, content_font=content_font)
 
 	sectioncss = ""
 	for section_template in section_templates:
 		if section_template in ['thinZigSection']:
-			sectioncss += env.get_template(section_template+'.css').render()
+			sectioncss += env.get_template('section/'+section_template+'.css').render(primary_color=primary_color, 
+			secondary_color=secondary_color, text_color=text_color, accent_color=accent_color, 
+			inv_text_color=inv_text_color,
+			heading_font=heading_font, content_font=content_font)
 
 	return make_file('static/css/style.css', [result, navbarcss, footercss, sectioncss])
 
 
 def make_intro_page(data, menuLinks):
-	navbar = env.get_template('basicNavbar.html').render(business_title="<br/>"+data['content']['businessTitle'],
+	navbar = env.get_template('navbar/basicNavbar.html').render(business_title="<br/>"+data['content']['businessTitle'],
 			business_subtitle=data['content']['businessSubTitle'],
 			links=["static/"+link for link in menuLinks])
 

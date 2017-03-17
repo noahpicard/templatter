@@ -13,20 +13,20 @@ font-family: 'Indie Flower', cursive;*/
 
 /* Styles */
 body {
-	background-color: hsl(177.53,79.74%,68.78%);
+	background-color: hsl(0.0,0.0%,95.0%);
 	color: #222;
 	font-size: 16px;
 }
 
 h1 {
-	font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: Playfair Display, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 h2 {
 	font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #business-title {
-	font-family: Raleway, Garamond, 'Times New Roman', serif;
+	font-family: Playfair Display, Garamond, 'Times New Roman', serif;
 	font-size: 200%;
 	color:#222;
 }
@@ -34,12 +34,12 @@ h2 {
 #business-subtitle {
 	font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 120%;
-	color: hsl(27.53,79.74%,68.78%);
+	color: #222;
 }
 
 #main-navbar {
-	background-color: hsl(327.53,79.74%,68.78%);
-	color: hsl(27.53,79.74%,68.78%);
+	background-color: hsl(312.78,47.87%,71.38%);
+	color: hsl(222.78,47.87%,71.38%);
 	border: none;
 	border-radius: 0px;
 	min-height: 5em;
@@ -60,7 +60,7 @@ h2 {
 div.color-full-center {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(50,50,170,0.4);
+	background-color: rgba(255,255,255,0.4);
 }
 
 div.color-full-center-image-box {
@@ -72,6 +72,7 @@ div.color-full-center-image-box {
 	background-position: center; 
 	background-size: 100%;
 	background-repeat: no-repeat;
+	/*filter: saturate(400%);*/
 } 
 
 .cta-box {
@@ -88,7 +89,7 @@ div.color-full-center-image-box {
 }
 
 .cta-heading {
-	font-family: Raleway;
+	font-family: Playfair Display;
 }
 
 .cta-subheading {
@@ -103,7 +104,7 @@ div.color-full-center-image-box {
 }
 
 .button {
-	background-color: hsl(27.53,79.74%,68.78%);
+	background-color: hsl(222.78,47.87%,71.38%);
 	padding:.3em;
 	display: inline-block;
 	font-family: Roboto;
@@ -141,13 +142,12 @@ div.color-full-center-image-box {
 
 
 
-
 .navbar {
 	margin-bottom: 0px;
 }
 
 .navbar-nav>li>a {
-	color: hsl(27.53,79.74%,68.78%);
+	color: hsl(222.78,47.87%,71.38%);
 	text-align: center;
 }
 
@@ -156,10 +156,12 @@ div.color-full-center-image-box {
 }
 
 .navbar-header {
-	height: 7em;
+	min-height: 7em;
   display: flex;
   align-items: center;
 }
+
+
 
 #main-menu {
 	height:100%;
@@ -168,11 +170,11 @@ div.color-full-center-image-box {
 #main-menu>li {
 	display: flex;
 	align-items: center;
-	height: 7em; 
+	min-height: 7em; 
 }
 
 #main-menu>li:hover {
-	background-color: hsl(27.53,79.74%,68.78%);
+	background-color: hsl(222.78,47.87%,71.38%);
 }
 
 #main-menu>li:hover>a {
@@ -183,8 +185,35 @@ div.color-full-center-image-box {
 	padding: 0px;
 }
 
+
+
+
 .zig-section {
 	height: 100%;
+}
+
+.zig-section-box {
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.band-zig-section-box-0 {
+	margin-top:2em;
+	margin-bottom: 2em;
+	padding: 2em;
+}
+
+.band-zig-section-box-1 {
+	margin-top:2em;
+	margin-bottom: 2em;
+	padding: 2em;
+	background-color: hsl(312.78,47.87%,71.38%);
+}
+
+.band-zig-section-box-1>.container {
+	padd:2em;
 }
 
 .column-section {
@@ -192,9 +221,9 @@ div.color-full-center-image-box {
 }
 
 .basic-footer-box {
-	background-color: hsl(27.53,79.74%,68.78%);
+	margin-top: 2em;
+	background-color: hsl(222.78,47.87%,71.38%);
 	color: #222;
-	margin: 1em;
 }
 
 .center {
@@ -218,6 +247,17 @@ div.color-full-center-image-box {
 	display: flex;
   align-items: center;
 }
+
+
+/*p.column-section-paragraph {
+	width: 100%;
+	height:100px;
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}*/
+
 .navbar-header {
   display: block;
   text-align: center;

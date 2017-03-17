@@ -1,0 +1,70 @@
+{
+	"title": "Your Company Title | Your company subtitle",
+	"content": {
+		"businessTitle": "Your Company Title",
+		"businessSubTitle": "Your company subtitle",
+		"pages": {
+			"index": {
+				"pageType": "landingPage",
+				"content": {
+					"intro": {
+						"mainImages": {
+							"handshake": "img/unsplash_desk.jpeg",
+							"headnod": "img/unsplash_desk.jpeg",
+							"standup": "img/unsplash_desk.jpeg"
+						},
+						"callToAction": {
+							"heading": "Placing Powerful People",
+							"subheading": "We're Cecelia McNeil & Associates. And we want you in our midst- We're looking for the most competitive candidates out there. Check us out.",
+							"actionButton": "Join Us",
+							"actionLink": "about.html"
+						}
+					},
+					"details": {
+						"sections": {
+							"breaking": {
+								"heading": "Breaking & Entering",
+								"subheading": "We know what you want, and where to find it",
+								"paragraph": "You've taken action on Change.org in the past to fight for human rights. As activists, organizers, and everyday people continue to call for justice and compassion throughout the world, we wanted to share an article that has people talking.",
+								"image": "img/unsplash_beachrise.jpeg"
+							},
+							"security": {
+								"heading": "Secure in Your Position?",
+								"subheading": "",
+								"paragraph": "A recent piece in Refinery29 tells the moving story of two moms, both whom lost their sons within hours and days of putting them in daycare, who are asking presidential candidates to make paid leave a priority:",
+								"image": "img/unsplash_sunglasses.jpeg"
+							},
+							"demonstration": {
+								"heading": "Ghostly Apparations",
+								"subheading": "In some obscure cases we find the remains are not all that remain",
+								"paragraph": "Like many, many other mothers in America who face the end of their scraped-together maternity leaves, I felt it was too soon to go back to work. Of course, when I came back to the daycare a couple hours later that same morning to see my beautiful, healthy baby boy lying unconscious with blue lips, it was pure horror. There are no words to describe the agony of the loss of a child - and when it was the first time you had left them, that causes a million other layers of grief and pain onto the pain.",
+								"image": "img/unsplash_planes.jpeg"
+							},
+							"demonstration": {
+								"heading": "Ghostly Apparations",
+								"subheading": "In some obscure cases we find the remains are not all that remain",
+								"paragraph": "Like many, many other mothers in America who face the end of their scraped-together maternity leaves, I felt it was too soon to go back to work. Of course, when I came back to the daycare a couple hours later that same morning to see my beautiful, healthy baby boy lying unconscious with blue lips, it was pure horror. There are no words to describe the agony of the loss of a child - and when it was the first time you had left them, that causes a million other layers of grief and pain onto the pain.",
+								"image": "img/unsplash_planes.jpeg"
+							}
+						}
+					}
+				}
+			},
+			"about": {
+				"pageType": "aboutPage",
+				"content": {}
+			},
+			"services": {
+				"pageType": "infoPage",
+				"content": {}
+			}
+		},
+		"footer": {
+			"links": {
+				"linkedin": "https://www.linkedin.com/in/noah-picard-48773470",
+				"facebook": "https://www.facebook.com/noah.picard"
+			}
+		}
+
+	}
+}

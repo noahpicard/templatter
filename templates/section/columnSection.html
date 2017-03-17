@@ -1,0 +1,39 @@
+{% if counter == 0 %}
+<div class="container center">
+{% endif %}
+
+<div class='column-section-box {{ column_weight }}'>
+	<div class='column-section center'>
+
+		{% if image %}
+			<img src='{{ image }}' class='column-section-image' style="width:100%;" />
+		{% endif %}
+
+		{% if heading %}
+			<h1 class='column-section-heading'>{{ heading }}</h1>
+		{% endif %}
+
+		{% if subheading %}
+			<h2 class='column-section-subheading'>{{ subheading }}</h2>
+		{% endif %}
+
+		{% if paragraph %}
+			<p class='column-section-paragraph'>{{ paragraph }}</p>
+		{% endif %}
+
+		{% if action_link %}
+		<div class='button'>
+			<a href='{{ action_link }}'>
+				<div>
+					Read More
+				</div>
+			</a>
+		</div>
+		{% endif %}
+
+	</div>
+</div>
+
+{% if counter+1 == number_of_sections %}
+</div>
+{% endif %}

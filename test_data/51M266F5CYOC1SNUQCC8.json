@@ -1,0 +1,62 @@
+{
+    "content": {
+        "businessSubTitle": "Webmaster", 
+        "businessTitle": "Noah Picard", 
+        "pages": {
+            "page0": {
+                "content": {
+                    "details": {
+                        "sections": {
+                            "page0Section0": {
+                                "heading": "Unintelligible", 
+                                "image": "../upload/DSC_2017.jpg", 
+                                "paragraph": "Murmuring. Dark Murmuring", 
+                                "subheading": "<span style='color:#660'>Whatever does he mean?</span>"
+                            }
+                        }
+                    }, 
+                    "intro": {
+                        "callToAction": {
+                            "actionButton": "Listen", 
+                            "actionLink": "listen.html", 
+                            "heading": "Mark of the Devil", 
+                            "subheading": "Hear him rise from the depths"
+                        }, 
+                        "mainImages": {
+                            "main": "../upload/DSC_2016.jpg"
+                        }
+                    }
+                },
+                "pageType": "homePage", 
+                "subtitle": "", 
+                "title": "Home"
+            }, 
+            "page1": {
+                "content": {
+                    "details": {
+                        "sections": {}
+                    }, 
+                    "intro": {
+                        "callToAction": {
+                            "actionButton": "", 
+                            "actionLink": "", 
+                            "heading": "", 
+                            "subheading": ""
+                        }, 
+                        "mainImages": {
+                            "main": ""
+                        }
+                    }
+                },
+                "pageType": "generalPage", 
+                "subtitle": "ooh what",
+                "title": "Listen"
+            }
+        },
+        "footer": {
+            "links": {}
+        }
+    }, 
+    "subtitle": "Webmaster", 
+    "title": "Noah Picard"
+}

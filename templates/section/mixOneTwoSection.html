@@ -1,0 +1,92 @@
+{% if counter == 0 %}
+<div class="container center">
+{% endif %}
+
+{% if counter%3 == 0 %}
+<div class='zig-section-box centerItems'>
+	{% if image and (counter+seed)%2 == 0 %}
+		<div class='zig-section center col-md-6 col-sm-12'>
+			<img src='{{ image }}' class='zig-section-image' style="width:100%;" />
+		</div>
+	{% endif %}
+
+	<div class='zig-section center {% if image %} col-md-6 col-sm-12 {% else %} col-md-12 {% endif %}'>
+
+		
+
+		{% if heading %}
+			<h1 class='zig-section-heading'>{{ heading }}</h1>
+		{% endif %}
+
+		{% if subheading %}
+			<h2 class='zig-section-subheading'>{{ subheading }}</h2>
+		{% endif %}
+
+		{% if paragraph %}
+			<p class='zig-section-paragraph'>{{ paragraph }}</p>
+		{% endif %}
+
+		{% if action_link %}
+		<div class='button zig-section-button'>
+			<a href='{{ action_link }}'>
+				<div>
+					Read More
+				</div>
+			</a>
+		</div>
+		{% endif %}
+
+	</div>
+	{% if image and (counter+seed)%2 == 1 %}
+		<div class='zig-section center col-md-6 col-sm-12'>
+			<img src='{{ image }}' class='zig-section-image' style="width:100%;" />
+		</div>
+	{% endif %}
+</div>
+{% else %}
+
+{% if (counter%3)%2 == 1 %}
+<div class="row">
+{% endif %}
+
+<div class='column-section-box col-md-6'>
+	<div class='column-section center'>
+
+		{% if image %}
+			<img src='{{ image }}' class='column-section-image' style="width:100%;" />
+		{% endif %}
+
+		{% if heading %}
+			<h1 class='column-section-heading'>{{ heading }}</h1>
+		{% endif %}
+
+		{% if subheading %}
+			<h2 class='column-section-subheading'>{{ subheading }}</h2>
+		{% endif %}
+
+		{% if paragraph %}
+			<p class='column-section-paragraph'>{{ paragraph }}</p>
+		{% endif %}
+
+		{% if action_link %}
+		<div class='button'>
+			<a href='{{ action_link }}'>
+				<div>
+					Read More
+				</div>
+			</a>
+		</div>
+		{% endif %}
+
+	</div>
+</div>
+
+{% if (counter%3)%2 == 0 %}
+</div>
+{% endif %}
+
+{% endif %}
+
+{% if (counter+1 == number_of_sections) %}
+</div>
+{% endif %}

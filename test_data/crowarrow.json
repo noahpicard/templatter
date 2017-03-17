@@ -1,0 +1,70 @@
+{
+	"title": "Crow & Arrow | Hardwood artisan clothier",
+	"content": {
+		"businessTitle": "Crow & Arrow",
+		"businessSubTitle": "Hardwood artisan clothier",
+		"pages": {
+			"index": {
+				"pageType": "landingPage",
+				"content": {
+					"intro": {
+						"mainImages": {
+							"handshake": "img/unsplash_crouch_shoes.jpg",
+							"headnod": "img/unsplash_crouch_shoes.jpg",
+							"standup": "img/unsplash_crouch_shoes.jpg"
+						},
+						"callToAction": {
+							"heading": "Tight-trimmed and Hand-wrung",
+							"subheading": "We're Crow & Arrow, and we want to help you be the most you. Our team of expert clothiers are ready to nip, tuck, and fasten a new fashion for all occasions.",
+							"actionButton": "Give Us a Call",
+							"actionLink": "about.html"
+						}
+					},
+					"details": {
+						"sections": {
+							"0": {
+								"heading": "Adjuments",
+								"subheading": "Any size, shape, pattern- all adjustable.",
+								"paragraph": "You've taken action on Change.org in the past to fight for human rights. As activists, organizers, and everyday people continue to call for justice and compassion throughout the world, we wanted to share an article that has people talking.",
+								"image": "img/unsplash_drafting.jpg"
+							},
+							"1": {
+								"heading": "Fall Foliage",
+								"subheading": "",
+								"paragraph": "A recent piece in Refinery29 tells the moving story of two moms, both whom lost their sons within hours and days of putting them in daycare, who are asking presidential candidates to make paid leave a priority:",
+								"image": "img/unsplash_fall_leaves.jpg"
+							},
+							"2": {
+								"heading": "Complete Looks",
+								"subheading": "All eyes on you. Our set of complete outfits.",
+								"paragraph": "Like many, many other mothers in America who face the end of their scraped-together maternity leaves, I felt it was too soon to go back to work. Of course, when I came back to the daycare a couple hours later that same morning to see my beautiful, healthy baby boy lying unconscious with blue lips, it was pure horror. There are no words to describe the agony of the loss of a child - and when it was the first time you had left them, that causes a million other layers of grief and pain onto the pain.",
+								"image": "img/unsplash_tying_shoes.jpg"
+							},
+							"3": {
+								"heading": "Beyond Style",
+								"subheading": "Other fineries available at locations near you.",
+								"paragraph": "",
+								"image": "img/unsplash_button_shirt.jpg"
+							}
+						}
+					}
+				}
+			},
+			"about": {
+				"pageType": "aboutPage",
+				"content": {}
+			},
+			"services": {
+				"pageType": "infoPage",
+				"content": {}
+			}
+		},
+		"footer": {
+			"links": {
+				"linkedin": "https://www.linkedin.com/in/noah-picard-48773470",
+				"facebook": "https://www.facebook.com/noah.picard"
+			}
+		}
+
+	}
+}
