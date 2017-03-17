@@ -13,33 +13,33 @@ font-family: 'Indie Flower', cursive;*/
 
 /* Styles */
 body {
-	background-color: hsl(0.0,0.0%,95.0%);
-	color: #222;
+	background-color: hsl(216.66,47.17%,22.45%);
+	color: #eee;
 	font-size: 16px;
 }
 
 h1 {
-	font-family: Playfair Display, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 h2 {
-	font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: Open Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #business-title {
-	font-family: Playfair Display, Garamond, 'Times New Roman', serif;
+	font-family: Roboto, Garamond, 'Times New Roman', serif;
 	font-size: 200%;
-	color:#222;
+	color:#eee;
 }
 
 #business-subtitle {
-	font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: Open Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 120%;
-	color: #222;
+	color: #eee;
 }
 
 #main-navbar {
-	background-color: hsl(312.78,47.87%,71.38%);
-	color: hsl(222.78,47.87%,71.38%);
+	background-color: hsl(336.66,47.17%,22.45%);
+	color: hsl(36.66,47.17%,22.45%);
 	border: none;
 	border-radius: 0px;
 	min-height: 5em;
@@ -60,7 +60,7 @@ h2 {
 div.color-full-center {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(255,255,255,0.4);
+	background-color: rgba(0,0,0,0.4);
 }
 
 div.color-full-center-image-box {
@@ -89,25 +89,25 @@ div.color-full-center-image-box {
 }
 
 .cta-heading {
-	font-family: Playfair Display;
+	font-family: Roboto;
 }
 
 .cta-subheading {
-	font-family: Roboto;
+	font-family: Open Sans;
 }
 
 
 .button>a {
 	text-decoration: none;
 	text-align: center;
-	color: #222;
+	color: #eee;
 }
 
 .button {
-	background-color: hsl(222.78,47.87%,71.38%);
+	background-color: hsl(36.66,47.17%,22.45%);
 	padding:.3em;
 	display: inline-block;
-	font-family: Roboto;
+	font-family: Open Sans;
 }
 
 
@@ -125,8 +125,8 @@ div.color-full-center-image-box {
 	background-color: rgba(0,0,0,0);
 	transition: background-color .3s;
 	
-	border: 4px solid #222;
-	font-family: Roboto;
+	border: 4px solid #eee;
+	font-family: Open Sans;
 }
 
 .cta-button:hover {
@@ -147,7 +147,7 @@ div.color-full-center-image-box {
 }
 
 .navbar-nav>li>a {
-	color: hsl(222.78,47.87%,71.38%);
+	color: hsl(36.66,47.17%,22.45%);
 	text-align: center;
 }
 
@@ -174,11 +174,11 @@ div.color-full-center-image-box {
 }
 
 #main-menu>li:hover {
-	background-color: hsl(222.78,47.87%,71.38%);
+	background-color: hsl(36.66,47.17%,22.45%);
 }
 
 #main-menu>li:hover>a {
-	color: #222;
+	color: #eee;
 }
 
 .navbar-child {
@@ -209,7 +209,7 @@ div.color-full-center-image-box {
 	margin-top:2em;
 	margin-bottom: 2em;
 	padding: 2em;
-	background-color: hsl(312.78,47.87%,71.38%);
+	background-color: hsl(336.66,47.17%,22.45%);
 }
 
 .band-zig-section-box-1>.container {
@@ -222,8 +222,8 @@ div.color-full-center-image-box {
 
 .basic-footer-box {
 	margin-top: 2em;
-	background-color: hsl(222.78,47.87%,71.38%);
-	color: #222;
+	background-color: hsl(36.66,47.17%,22.45%);
+	color: #eee;
 }
 
 .center {
@@ -258,45 +258,13 @@ div.color-full-center-image-box {
   text-overflow: ellipsis;
 }*/
 
-.navbar-header {
-  display: block;
-  text-align: center;
-  width: 100%;
-  height: auto;
-  padding: 1em 0 1em 0;
-  margin-top: .5em;
-}
-
-.navbar-brand {
-	float: none;
-	line-height: none;
-}
-.flex {
-	display: flex;
-}
-
-#main-menu {
-	float: none;
-	margin-left: auto;
-	margin-right:auto;
-}
-
-#main-menu>li {
-	height: 5em; 
-	text-align: center;
-}
-
 #main-navbar {
-	position: relative;
-	background-color: transparent;
-}
-
-#business-title {
-	font-size: 400%;
-}
-#business-subtitle {
-	font-size: 200%;
-	margin: .2em;
+  background-color: rgba(0,0,0,0);
+  position: absolute;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 
